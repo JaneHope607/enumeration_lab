@@ -14,4 +14,8 @@ class StarSystem
     return @planets.find { |planet| planet.name == planet_name}
   end
 
+  def get_largest_planet()
+    planets_diameters = @planets.map { |planet| planet.diameter }
+    @planets.find { |planet| planet.diameter == planets_diameters.max}
+  end
 end
