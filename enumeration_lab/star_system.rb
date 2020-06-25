@@ -18,4 +18,9 @@ class StarSystem
     planets_diameters = @planets.map { |planet| planet.diameter }
     @planets.find { |planet| planet.diameter == planets_diameters.max}
   end
+
+  def get_smallest_planet()
+    planets_diameters = @planets.map { |planet| planet.diameter }
+    @planets.find { |planet| planet.diameter == planets_diameters.min}
+  end
 end
