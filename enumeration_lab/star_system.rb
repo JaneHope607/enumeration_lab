@@ -2,8 +2,8 @@ class StarSystem
   attr_reader :name, :planets
 
   def initialize(name, planets)
-  @name = name
-  @planet = planets
+    @name = name
+    @planets = planets
   end
     
 end
