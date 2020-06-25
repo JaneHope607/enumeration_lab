@@ -46,4 +46,10 @@ class StarSystem
     sorted = @planets.sort_by {|planet| planet.distance_from_sun}
     return sorted.map {|planet| planet.name}
   end
+
+  def get_planet_names_sorted_by_size_decreasing
+    planets_decreasing = @planets.sort_by { |planet| -planet.diameter }
+    return planets_decreasing.map { |planet| planet.name }
+  end
+
 end
