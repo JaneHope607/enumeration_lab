@@ -28,4 +28,13 @@ class StarSystem
     @planets.select { |planet| planet.number_of_moons == 0 }
   end
 
+  def get_planets_with_more_moons(expected_moons)
+    planets = @planets.select { |planet| planet.number_of_moons > expected_moons} 
+    return planets.map { |planet| planet.name}
+  end
+
+  def get_number_of_planets_closer_than(distance)
+    planets = @planets.select { |planet| planet.distance_from_sun < distance}
+    return planets.count
+  end
 end
