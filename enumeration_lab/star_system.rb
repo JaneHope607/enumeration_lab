@@ -6,8 +6,8 @@ class StarSystem
     @planets = planets
   end
     
-  def planet_names
-    return @planets.map {|planet| planet.name}
+  def planet_names()
+    return @planets.map { |planet| planet.name }
   end
 
   def get_planet_by_name(planet_name)
@@ -23,4 +23,9 @@ class StarSystem
     planets_diameters = @planets.map { |planet| planet.diameter }
     @planets.find { |planet| planet.diameter == planets_diameters.min}
   end
+
+  def get_planets_with_no_moons()
+    @planets.select { |planet| planet.number_of_moons == 0 }
+  end
+
 end
